@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Pacifico', cursive;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./image/311571837_628056825637667_6303919543983809541_n.jpeg');
+    background-position: center;
+    overflow: hidden;
+}
+
+.opacity {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background-color: gray;
+    opacity: 0.8;
+}
+
+.main {
+    position: relative;
+    z-index: 1000;
+    padding-top: 15px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main > .main_heart {
+    position: absolute;
+}
+
+.main > .main_heart:nth-child(1) {
+    top: 100px;
+    left: 300px;
+}
+
+.main > .main_heart:nth-child(2) {
+    top: 300px;
+    left: 168px;
+}
+
+.main > .main_heart:nth-child(3) {
+    bottom: -100px;
+    left: 100px;
+}
+
+.main > .main_heart:nth-child(4) {
+    top: 100px;
+    left: 100px;
+}
+
+.main_header {
+    text-align: center;
+    position: relative;
+}
+
+.main_header_heart {
+    position: absolute;
+    top: 285px;
+    right: 688px;
+}
+
+.main_header_heart > div > .left {
+    width: 20px;
+    height: 40px;
+}
+
+.main_header_heart > div > .right {
+    width: 20px;
+    height: 40px;
+    right: 122px;
+}
+
+.main_header > h1 {
+    font-size: 52px;
+}
+
+.main_header > p {
+    font-size: 26px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heart {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: heart 1s ease infinite;
+}
+
+@keyframes heart {
+    96% {
+        transform: translate(-50%, -50%) scale(0.8, 0.8);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1, 1);
+    }
+}
+
+.heart div {
+    background: red;
+    width: 71px;
+    height: 126px;
+    top: 40px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.left {
+    left: 45px;
+    transform: rotate(330deg);
+}
+
+.right {
+    right: 45px;
+    transform: rotate(30deg);
+}
+
+.main_btn {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.co,
+.khong,
+.hoi_ty,
+.main_btn > button {
+  border: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+}
+
+.co,
+.hoi_ty,
+.main_btn >  button:nth-child(1) {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+
+.main_btn > button:nth-child(2) {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    display:none;
+}
+
+.khong {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.hoi_ty {
+    margin-top: 10px;
+}
+
+.u-oa-2,
+.u-oa {
+  position:fixed;
+  bottom: -100%;
+  right: 38%;
+  z-index: 700;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: white;
+  width: 400px;
+  transition: all 0.5s ease;
+}
+
+.u-oa-2 > h5,
+.u-oa > h5 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.u-oa-2.active,
+.u-oa.active {
+  bottom: 0;
+}
+
+.u-oa-2 > img,
+.u-oa > img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cau_hoi,
+.qua {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    background-color:pink;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    color:white;
+    transition: all 0.3s ease;
+    transform: scale(0);
+}
+
+.cau_hoi.active,
+.qua.active {
+    transform: scale(1);
+}
+
+.qua > p {
+    font-weight: normal;
+    font-size: 42px;
+    pointer-events: none;
+}
+
+.qua > h3 {
+    font-size: 24px;
+    max-width:600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: rgb(24, 72, 192);
+}
+
+.cau_hoi > h5 {
+    font-size: 32px;
+    margin-bottom: 55px;
+}
+
+.cau_hoi > div {
+    display: flex;
+    align-items: center;
+    gap:100px;
+}
+
+.cau_hoi > div > button {
+    font-size: 16px;
+}
