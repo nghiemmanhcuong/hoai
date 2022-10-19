@@ -53,5 +53,5 @@ $('.co').onclick = () => {
     $('.main_btn > button:nth-child(2)').style.pointerEvents = 'none';
     setTimeout(() => {
         $('.cau_hoi').classList.remove('active');
-    },3000)
+    },1000)
 }
